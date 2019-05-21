@@ -27,5 +27,7 @@ class Category(models.Model):
 
 
 class Topic(models.Model):
+    """Intermediate Model for handling many to many relationship and
+    categorizing posts in admin portal"""
     post = models.ForeignKey(Post, on_delete=models.CASCADE)
     category = models.ForeignKey(Category, on_delete=models.CASCADE)
