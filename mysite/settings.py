@@ -39,14 +39,12 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'polling',
     'blogging',
-
     'django.contrib.sites',
-
     'allauth',
     'allauth.account',
     'allauth.socialaccount',
-    # ... include the providers you want to enable:,
     'allauth.socialaccount.providers.github',
+    'rest_framework',
 ]
 
 MIDDLEWARE = [
@@ -116,6 +114,11 @@ AUTHENTICATION_BACKENDS = (
     # `allauth` specific authentication methods, such as login by e-mail
     'allauth.account.auth_backends.AuthenticationBackend',
 )
+
+REST_FRAMEWORK = {
+    'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.PageNumberPagination',
+    'PAGE_SIZE': 10
+}
 
 
 # Internationalization
