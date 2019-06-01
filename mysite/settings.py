@@ -25,7 +25,7 @@ SECRET_KEY = '4k#%y5qkd0ug(y=cy@r7=dj@!kw!-n@6d3f#42zct%fab-w3r)'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['py230-ubtuntu009003.westus.cloudapp.azure.com']
 
 
 # Application definition
